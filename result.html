@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Customer Segmentation</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='segmentation-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Customer Segmentation</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==0}
+				<h1>Prediction: <span class='better'>You are a better customer.You spent around 800.</span></h1>
+				
+			{% elif prediction==1}
+				<h1>Prediction: <span class='Average'>You are a average customer.You spent around 800.</span></h1>
+
+			{% elif prediction==2}
+				<h1>Prediction: <span class='Not good'>Oops! you spent very less money.You spent around 100.</span></h1>
+
+                        {% elif prediction==3}
+				<h1>Prediction: <span class='best'>You are a best customer.You spent around 900.</span></h1>
+
+	                {% elif prediction==4}
+				<h1>Prediction: <span class='significant'>You are a below average customer.You spent around 230.</span></h1>
+
+			{% endif %}
+		</div>
+
+		
+           <p>Made with ❤️ by Praful kumar.</p>
+       
+
+	</body>
+</html>

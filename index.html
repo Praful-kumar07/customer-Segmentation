@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Customer Segmentation</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='segmentation-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Customer Segmentation</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="products_purchased" placeholder="No. of product eg. 2"><br>
+                <input class="form-input" type="text" name="complains" placeholder="No. of complains eg. 1"><br>
+                <input class="form-input" type="text" name="money_spent" placeholder="Amount spent eg. 500"><br>
+                
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        
+           <p>Made with ❤️ by Praful kumar</p>
+       
+
+    </body>
+</html>
